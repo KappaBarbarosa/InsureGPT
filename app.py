@@ -17,7 +17,7 @@ embedding_model = FlagModel(
 )
 
 # 初始化 ChromaDB
-chroma_client = chromadb.PersistentClient(path="./chroma_db")
+chroma_client = chromadb.EphemeralClient()
 collection = chroma_client.get_or_create_collection(name="insurance_rag_test", embedding_function=None)
 
 # 初始化 Streamlit 頁面
