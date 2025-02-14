@@ -3,3 +3,4 @@ google-generativeai
 chromadb
 FlagEmbedding
 pysqlite3-binary
+torch
