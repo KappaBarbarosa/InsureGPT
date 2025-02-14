@@ -23,10 +23,7 @@ embedding_model = FlagModel(
 )
 
 # 初始化 ChromaDB
-if not os.path.exists("chroma_db"):
-    repo_url = "https://github.com/KappaBarbarosa/InsureGPT"
-    subprocess.run(["git", "clone", repo_url])
-    print("✅ 成功從 GitHub 下載 ChromaDB 資料庫")
+
 chroma_client = chromadb.PersistentClient(path="./chroma_db")
 collection = chroma_client.get_or_create_collection(name="insurance_rag_test", embedding_function=None)
 
