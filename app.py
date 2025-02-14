@@ -3,7 +3,7 @@ import google.generativeai as genai
 import chromadb
 
 # 設定 Google Gemini API
-GEMINI_API_KEY = "AIzaSyAY6Q1GIxBg-s5ocjPxwvjh1D0IB-nKglY"
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=GEMINI_API_KEY)
 
 # 建立 Gemini 2.0 Flash 模型
