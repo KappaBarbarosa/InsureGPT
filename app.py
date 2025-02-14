@@ -26,7 +26,7 @@ embedding_model = FlagModel(
 # 初始化 ChromaDB
 
 chroma_client = chromadb.PersistentClient(path="./chroma_db")
-collection = chroma_client.get_or_create_collection(name="insurance_rag_test", embedding_function=None)
+collection = chroma_client.get_or_create_collection(name="insurance_database", embedding_function=None)
 
 # 初始化 Streamlit 頁面
 st.title("💬 AI 保險顧問")
