@@ -1,5 +1,10 @@
 import streamlit as st
 import google.generativeai as genai
+
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 import chromadb
 
 # 設定 Google Gemini API

@@ -1,5 +1,5 @@
+pysqlite3-binary
 streamlit
 google-generativeai
 chromadb
 FlagEmbedding
-pysqlite3-binary
