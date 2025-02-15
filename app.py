@@ -2,11 +2,13 @@ import streamlit as st
 import google.generativeai as genai
 import os
 import torch
-__import__('pysqlite3')
 import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+import pysqlite3
+    # 將 sqlite3 module 的指向替換為 pysqlite3
+sys.modules['sqlite3'] = pysqlite3
 import chromadb
-torch.classes.__path__ = []
+if hasattr(torch.classes, '__path__'):
+    torch.classes.__path__ = []
 
 
 # 設定 Google Gemini API
